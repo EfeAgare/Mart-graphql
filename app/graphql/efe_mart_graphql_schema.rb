@@ -37,4 +37,12 @@ class EfeMartGraphqlSchema < GraphQL::Schema
     # For example, use Rails' GlobalID library (https://github.com/rails/globalid):
     GlobalID.find(global_id)
   end
+
+  def self.authorized?(object, context)
+    unless context[:current_user]
+      raise GraphQL::ExecutionError.new("Unauthorized error", options: { status: :unauthorized, code: 401 })
+    end
+
+    super && context[:current_user]
+  end
 end

@@ -27,6 +27,8 @@ gem 'bootsnap', '>= 1.4.4', require: false
 
 gem 'devise'
 
+gem "jwt"
+
 gem 'pry'
 
 group :development, :test do
@@ -52,3 +54,4 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem "graphql", "~> 2.0"
+gem 'graphiql-rails'
