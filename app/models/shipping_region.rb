@@ -1,0 +1,2 @@
+class ShippingRegion < ApplicationRecord
+end

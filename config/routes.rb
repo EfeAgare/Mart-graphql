@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :customers
   root "welcome#index"
 
   # devise_for :users
