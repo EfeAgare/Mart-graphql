@@ -5,10 +5,10 @@ FactoryBot.define do
     shipped_on { "2022-09-14 23:44:12" }
     status { 1 }
     comments { "MyString" }
-    customer { nil }
+    customer
     auth_code { "MyString" }
     reference { "MyString" }
-    shipping { nil }
-    tax { nil }
+    shipping 
+    tax
   end
 end

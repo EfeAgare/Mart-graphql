@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :shopping_cart do
-    product { nil }
+    product
     attributes { "MyString" }
     quantity { 1 }
     buy_now { false }

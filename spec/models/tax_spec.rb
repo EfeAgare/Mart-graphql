@@ -1,5 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe Tax, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe "Validation" do
+    it { should validate_presence_of(:type) }
+    it { should validate_presence_of(:percentage) }
+  end
 end
