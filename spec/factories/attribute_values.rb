@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :attribute_value do
-    attribute { nil }
+    attribute
     value { "MyString" }
   end
 end
