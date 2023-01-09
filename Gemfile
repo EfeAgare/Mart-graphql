@@ -28,7 +28,7 @@ gem 'bootsnap', '>= 1.4.4', require: false
 gem 'devise'
 
 gem "jwt"
-
+gem "figaro"
 gem 'pry'
 
 group :development, :test do
