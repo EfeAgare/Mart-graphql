@@ -2,50 +2,52 @@ require 'rails_helper'
 
 module Mutations
   module Customer
-    RSpec.describe Register, type: :request do
+    RSpec.describe Login, type: :request do
       describe '.resolve' do
-     
-
-        context "Graphql with wrong input" do
+    
+        context "Graphql with email that doesn't exist" do
           let(:variables) do
             {
               input: {
-                email: "eff@hh", password: "123456", name: "Efe"
+                email: "love@gmail.com", password: "123456"
               }
             }
           end
+
           it 'returns an error' do
+            customer = create(:customer, email: "eff@hh.com", password: "123456", name: "Efe")
+
             post '/graphql', params: { query: query, variables: variables }
 
             json = JSON.parse(response.body)
             data =  json['errors'][0]
 
-
             expect(data).to include(
-              "message"=>["Email is invalid"]
+              "message"=>"User not found or not registered yet"
             )
-
           end
         end
       
 
-        context 'Params with right input' do
+        context 'With email that already exist' do
           let(:variables) do
             {
               input: {
-                email: "eff@hh.com", password: "123456", name: "Efe"
+                email: "eff@hh.com", password: "123456"
               }
             }
           end
           it 'returns a customer' do
+            customer = create(:customer, email: "eff@hh.com", password: "123456", name: "Efe")
+
             post '/graphql',  params: { query: query, variables: variables }
             
             json = JSON.parse(response.body)
-            data = json['data']["register"]
+            data = json['data']["login"]
 
             expect(data).to include(
-              'email'          => variables[:input][:email],
-              'name'           => variables[:input][:name],
+              'email'          => customer.email,
+              'name'           => customer.name,
             )
           end
         end
@@ -53,8 +55,8 @@ module Mutations
 
       def query
         <<~GRAPHQL
-        mutation register ($input: RegisterInput!) {
-            register (input: $input) {
+        mutation login ($input: LoginInput!) {
+            login (input: $input) {
                 address1
                 address2
                 city
