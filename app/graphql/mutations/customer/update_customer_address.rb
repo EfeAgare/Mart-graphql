@@ -4,9 +4,9 @@ module Mutations
     argument :postal_code, String, required: true
     argument :region, String, required: true
     argument :city, String, required: true
-    argument :address_2, String, required: true
+    argument :address_2, String, required: false
     argument :address_1, String, required: true
-    argument :shipping_region_id, Int, required: true
+    argument :shipping_region_id, ID, required: false
 
     type Types::Models::CustomerType
 

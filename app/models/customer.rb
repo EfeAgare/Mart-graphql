@@ -11,7 +11,6 @@ class Customer < ApplicationRecord
   validates :email, presence: true, length: { maximum: 255 },
                     format: { with: VALID_EMAIL }, uniqueness: { case_sensitive: false }
 
-  validates :mobile_phone_2, phone: { possible: true, allow_blank: true }
   validates :mobile_phone, phone: { possible: true, allow_blank: true }
 
 end

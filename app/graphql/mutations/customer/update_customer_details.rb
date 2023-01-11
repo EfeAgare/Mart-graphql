@@ -1,8 +1,7 @@
 module Mutations
-  class Customer::UpdateCustomerAddress < Mutations::BaseMutation
+  class Customer::UpdateCustomerDetails < Mutations::BaseMutation
 
     argument :name, String, required: true
-    argument :mobile_phone_2, String, required: true
     argument :mobile_phone, String, required: true
 
     type Types::Models::CustomerType
