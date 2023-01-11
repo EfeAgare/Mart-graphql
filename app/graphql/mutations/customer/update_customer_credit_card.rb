@@ -9,10 +9,16 @@ module Mutations
 
       return not_found("User not found") unless current_user.present?
 
-      if current_user.update(attributes)
-        current_user
+      detector = CreditCardValidations::Detector.new(attributes[:credit_card])
+
+      if detector.valid?
+        if current_user.update(attributes)
+          current_user
+        else
+          unprocessable_entity(current_user.errors.full_messages)
+        end
       else
-        unprocessable_entity(current_user.errors.full_messages)
+        unprocessable_entity("Invalid credit card")
       end
     end
 
