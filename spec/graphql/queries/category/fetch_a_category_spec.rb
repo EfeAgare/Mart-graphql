@@ -19,7 +19,7 @@ module Queries
           category.save         
         end
 
-        context "Fetch all categories" do
+        context "Fetch a category" do
       
           it 'returns a successful output' do
 
