@@ -14,7 +14,6 @@ module Queries
             post '/graphql', params: { query: query }, headers: set_token(customer)
 
             json = JSON.parse(response.body)
-            binding.pry
 
             data =  json['data']['fetchCustomerProfile']
 
