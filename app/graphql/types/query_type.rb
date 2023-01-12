@@ -10,5 +10,12 @@ module Types
     # Customer
     field :fetch_customer_profile, resolver: Queries::Customer::FetchCustomerProfile
    
+    # Department
+    field :fetch_all_departments, resolver: Queries::Department::FetchAllDepartments
+    field :fetch_a_department, resolver: Queries::Department::FetchADepartment
+
+    # Category
+    field :fetch_a_category, resolver: Queries::Category::FetchACategory
+    field :fetch_all_categories, resolver: Queries::Category::FetchAllCategories
   end
 end
