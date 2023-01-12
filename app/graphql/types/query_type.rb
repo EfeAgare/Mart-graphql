@@ -19,5 +19,11 @@ module Types
     field :fetch_all_categories, resolver: Queries::Category::FetchAllCategories
     field :fetch_product_category, resolver: Queries::Category::FetchProductCategory
     field :fetch_all_categories_in_department, resolver: Queries::Category::FetchAllCategoriesInDepartment
+
+    # Attribute
+    field :fetch_all_attributes, resolver: Queries::Attribute::FetchAllAttributes
+    field :fetch_an_attribute, resolver: Queries::Attribute::FetchAnAttribute
+    field :fetch_product_attributes, resolver: Queries::Attribute::FetchProductAttributes
+    field :fetch_all_attribute_values, resolver: Queries::Attribute::FetchAllAttributeValues
   end
 end
