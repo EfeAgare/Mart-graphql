@@ -17,5 +17,7 @@ module Types
     # Category
     field :fetch_a_category, resolver: Queries::Category::FetchACategory
     field :fetch_all_categories, resolver: Queries::Category::FetchAllCategories
+    field :fetch_product_category, resolver: Queries::Category::FetchProductCategory
+    field :fetch_all_categories_in_department, resolver: Queries::Category::FetchAllCategoriesInDepartment
   end
 end
