@@ -4,6 +4,8 @@ class Customer < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  has_many :reviews
+
   VALID_EMAIL =/\A([\w+\-].?)+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i.freeze
 
   VALID_PASSWORD = /\A(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}/
