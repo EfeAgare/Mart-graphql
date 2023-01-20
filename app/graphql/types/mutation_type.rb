@@ -18,5 +18,9 @@ module Types
     # Attribute
     field :create_attribute, mutation: Mutations::Attribute::CreateAttribute
     field :create_attribute_value, mutation: Mutations::Attribute::CreateAttributeValue
+
+    # Product
+    field :create_product_review, mutation: Mutations::Product::CreateProductReview
+    field :create_product, mutation: Mutations::Product::CreateProduct
   end
 end

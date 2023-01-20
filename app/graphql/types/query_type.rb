@@ -25,5 +25,13 @@ module Types
     field :fetch_an_attribute, resolver: Queries::Attribute::FetchAnAttribute
     field :fetch_product_attributes, resolver: Queries::Attribute::FetchProductAttributes
     field :fetch_all_attribute_values, resolver: Queries::Attribute::FetchAllAttributeValues
+
+    # Product
+    field :fetch_all_products, resolver: Queries::Product::FetchAllProducts
+    field :fetch_product_reviews, resolver: Queries::Product::FetchProductReviews
+    field :fetch_product, resolver: Queries::Product::FetchProduct
+    field :fetch_products_in_category, resolver: Queries::Product::FetchProductsInCategory
+    field :fetch_products_in_department, resolver: Queries::Product::FetchProductsInDepartment
+    field :product_search, resolver: Queries::Product::ProductSearch
   end
 end
