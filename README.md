@@ -1,15 +1,16 @@
-https://pganalyze.com/blog/full-text-search-ruby-rails-postgres
-
 # Back End
 
 ## Getting started
 
-### Prerequisites
-
-In order to install and run this project locally, you would need to have the
+## Technologies
+  * Ruby
+  * Git
+  * Graphql
+  * Ruby on Rails
+  * Postgres. https://pganalyze.com/blog/full-text-search-ruby-rails-postgres
+  
+  In order to install and run this project locally, you would need to have the
 following installed on you local machine.
-
-- ruby-3.0.0
 
 ### Installation
 
