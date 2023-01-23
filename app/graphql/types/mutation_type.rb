@@ -22,5 +22,8 @@ module Types
     # Product
     field :create_product_review, mutation: Mutations::Product::CreateProductReview
     field :create_product, mutation: Mutations::Product::CreateProduct
+
+    # Tax
+    field :create_tax, mutation: Mutations::Tax::CreateTax
   end
 end

@@ -33,5 +33,9 @@ module Types
     field :fetch_products_in_category, resolver: Queries::Product::FetchProductsInCategory
     field :fetch_products_in_department, resolver: Queries::Product::FetchProductsInDepartment
     field :product_search, resolver: Queries::Product::ProductSearch
+
+    ## Tax
+    field :fetchTax, resolver: Queries::Tax::FetchTax
+    field :fetchAllTax, resolver: Queries::Tax::FetchAllTax
   end
 end
