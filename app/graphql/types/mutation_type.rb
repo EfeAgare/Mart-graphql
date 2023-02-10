@@ -37,5 +37,6 @@ module Types
 
     # Shipping_cart
     field :addProduct, mutation: Mutations::ShoppingCart::AddProduct
+    field :moveProductToCart, mutation: Mutations::ShoppingCart::MoveProductToCart
   end
 end
