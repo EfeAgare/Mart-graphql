@@ -27,5 +27,15 @@ module Types
 
     # Tax
     field :create_tax, mutation: Mutations::Tax::CreateTax
+
+    # Order
+    field :create_order, mutation: Mutations::Order::CreateOrder
+    field :set_auth_code, mutation: Mutations::Order::SetAuthCode
+    field :update_order, mutation: Mutations::Order::UpdateOrder
+    field :update_shipping_date, mutation: Mutations::Order::UpdateShippingDate
+    field :update_status, mutation: Mutations::Order::UpdateStatus
+
+    # Shipping_cart
+    field :addProduct, mutation: Mutations::ShoppingCart::AddProduct
   end
 end
