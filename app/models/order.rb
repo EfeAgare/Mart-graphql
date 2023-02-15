@@ -6,5 +6,15 @@ class Order < ApplicationRecord
   has_many :order_details
 
   validates :total_amount, presence: true
-  validates :created_on, presence: true
+
+  enum status: {
+    pending_confirmation: 0,
+    confirmed: 1,
+    shipped: 2,
+    delivered: 3
+  }
+
+  def self.instance_method_already_implemented?(method_name)
+    return true if %w(frozen frozen?).include? method_name 
+  end
 end
