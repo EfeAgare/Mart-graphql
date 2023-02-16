@@ -35,7 +35,7 @@ module Mutations
             }
           end
 
-          it 'returns the created shopping cart' do
+          it 'returns the created order' do
             post '/graphql',  params: { query: query, variables: variables }, headers: set_token(customer)
             
             json = JSON.parse(response.body)
