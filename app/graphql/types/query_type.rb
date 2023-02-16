@@ -41,5 +41,10 @@ module Types
     ## Shipping
     field :fetch_all_shipping_regions, resolver: Queries::Shipping::FetchAllShippingRegions
     field :fetch_shippings_in_region, resolver: Queries::Shipping::FetchShippingsInRegion
+
+    ## Shipping
+    field :fetch_saved_product, resolver: Queries::ShoppingCart::FetchSavedProducts
+    field :shopping_cart_total_amount, resolver: Queries::ShoppingCart::TotalAmount
+    field :unique_cart_id, resolver: Queries::ShoppingCart::UniqueCartId
   end
 end

@@ -5,6 +5,6 @@ module Types
     field :attributes,  String, null: true
     field :quantity, Types::ToInt, null: false
     field :buy_now, Boolean, null: false
-    field :card_id, String, null: false
+    field :cart_id, String, null: false
   end
 end
