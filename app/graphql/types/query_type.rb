@@ -37,5 +37,9 @@ module Types
     ## Tax
     field :fetchTax, resolver: Queries::Tax::FetchTax
     field :fetchAllTax, resolver: Queries::Tax::FetchAllTax
+
+    ## Shipping
+    field :fetch_all_shipping_regions, resolver: Queries::Shipping::FetchAllShippingRegions
+    field :fetch_shippings_in_regions, resolver: Queries::Shipping::FetchShippingsInRegion
   end
 end
