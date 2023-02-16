@@ -40,6 +40,6 @@ module Types
 
     ## Shipping
     field :fetch_all_shipping_regions, resolver: Queries::Shipping::FetchAllShippingRegions
-    field :fetch_shippings_in_regions, resolver: Queries::Shipping::FetchShippingsInRegion
+    field :fetch_shippings_in_region, resolver: Queries::Shipping::FetchShippingsInRegion
   end
 end
