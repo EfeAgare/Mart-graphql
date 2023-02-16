@@ -4,7 +4,7 @@ class CreateOrders < ActiveRecord::Migration[6.1]
       t.decimal :total_amount, null: false
       t.datetime :created_on, null: false
       t.datetime :shipped_on
-      t.integer :status
+      t.integer :status, default: 0
       t.string :comments
       t.references :customer, null: false, foreign_key: true
       t.string :auth_code

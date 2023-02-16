@@ -3,4 +3,7 @@ class Shipping < ApplicationRecord
 
   validates :cost, presence: true
   validates :type, presence: true
+
+  self.inheritance_column = nil
+
 end
