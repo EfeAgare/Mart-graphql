@@ -16,14 +16,7 @@ module Queries
 
       page = params[:page].present? ? (params[:page] - 1) * per_page : 0
 
-      products = ::Product.find_by_sql(["SELECT DISTINCT p.id, p.name, p.price, p.description, p.image, p.image_2, p.discounted_price, p.thumbnail, p.display
-        FROM            products p
-        INNER JOIN      product_categories pc
-                          ON p.id = pc.product_id
-        INNER JOIN      categories c
-                          ON pc.category_id = c.id
-        WHERE          c.department_id = ? 
-        LIMIT ? OFFSET ?", params[:department_id], per_page, page])
+      products = ::Product.fetch(params[:department_id], per_page, page)
 
       {
         products: products,

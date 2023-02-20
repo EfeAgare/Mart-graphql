@@ -3,10 +3,15 @@ class ShoppingCart < ApplicationRecord
 
   validates :attributes, presence: true
   validates :quantity, presence: true
-  validates :buy_now, presence: true
   validates :added_on, presence: true
 
-
+  scope :fetch_total_amount, -> (card_id) {
+    find_by_sql([
+         "SELECT SUM(COALESCE(NULLIF(p.discounted_price, 0), p.price) * sc.quantity) AS total_amount
+            FROM shopping_carts sc INNER JOIN products p ON sc.product_id = p.id
+            WHERE sc.cart_id = ? AND sc.buy_now", card_id])
+  }
+  
   def self.instance_method_already_implemented?(method_name)
     return true if %w(frozen frozen?).include? method_name 
   end
