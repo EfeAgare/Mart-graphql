@@ -46,5 +46,12 @@ module Types
     field :fetch_saved_product, resolver: Queries::ShoppingCart::FetchSavedProducts
     field :shopping_cart_total_amount, resolver: Queries::ShoppingCart::TotalAmount
     field :unique_cart_id, resolver: Queries::ShoppingCart::UniqueCartId
+
+    ## Order
+    field :fetch_customer_orders, resolver: Queries::Order::FetchCustomerOrders
+    field :fetch_most_recent_orders, resolver: Queries::Order::FetchMostRecentOrders
+    field :fetch_order_info, resolver: Queries::Order::FetchOrderInfo
+    field :fetch_orders_by_status, resolver: Queries::Order::FetchOrdersByStatus
+    field :fetch_order_details, resolver: Queries::Order::FetchOrderDetails
   end
 end
