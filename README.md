@@ -28,4 +28,5 @@ following installed on you local machine.
 
 - Visit `http://127.0.0.1:3000/graphiql`
 
-[graphql_POSTMAN](https://documenter.getpostman.com/view/5080411/2s8ZDYWMNf)
+[graphql_POSTMAN](https://documenter.getpostman.com/view/5080411/2s93CKPE31) for graphql APIs or upload `graphql.json` file to postman
+ 
