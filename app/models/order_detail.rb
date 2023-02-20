@@ -6,7 +6,7 @@ class OrderDetail < ApplicationRecord
   validates :product_name, presence: true
   validates :unit_cost, presence: true
 
-  scope :fetch, -> (order_id) {find_by_sql(["SELECT order_id, product_id, attributes, product_name,
+  scope :fetch, -> (order_id) {find_by_sql(["SELECT id, order_id, product_id, attributes, product_name,
          quantity, unit_cost, (quantity * unit_cost) AS subtotal FROM   order_details 
          WHERE  order_id = ?", order_id])}
 
