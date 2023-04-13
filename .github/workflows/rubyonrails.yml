@@ -39,6 +39,8 @@ jobs:
       # Add or replace dependency steps here
       - name: Install Ruby and gems
         uses: ruby/setup-ruby@55283cc23133118229fd3f97f9336ee23a179fcf # v1.146.0
+        with:
+          bundler-cache: true
       # Add or replace database setup steps here
       - name: Install dependencies
         run: bundle install
@@ -49,7 +51,6 @@ jobs:
       # Add or replace test runners here
       - name: Run tests
         run: bundle exec rspec
-
   # lint:
   #   runs-on: ubuntu-latest
   #   steps:

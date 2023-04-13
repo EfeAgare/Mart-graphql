@@ -31,7 +31,6 @@ class GenerateToken
   end
 
   def hmac_secret
-    puts ENV["HMAC_SECRET"]
     ENV["HMAC_SECRET"]
   end
 
