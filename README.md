@@ -1,3 +1,5 @@
+![example workflow](https://github.com/EfeAgare/Mart-graphql/actions/workflows/rubyonrails.yml/badge.svg)
+
 # Back End
 
 ## Getting started
