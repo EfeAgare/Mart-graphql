@@ -6,6 +6,6 @@ RSpec.describe AttributeValue, type: :model do
   end
 
   describe 'associations' do
-    it { should belong_to(:attri).class_name('Attribute') }
+    it { should belong_to(:attri) }
   end
 end

@@ -41,5 +41,8 @@ module Types
     field :moveProductToCart, mutation: Mutations::ShoppingCart::MoveProductToCart
     field :removeCart, mutation: Mutations::ShoppingCart::RemoveCart
     field :updateCartQuantity, mutation: Mutations::ShoppingCart::UpdateCartQuantity
+
+    # Payment
+    field :payment, mutation: Mutations::Payment::StripePayment
   end
 end

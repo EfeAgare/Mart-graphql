@@ -1,0 +1,14 @@
+# Add configuration values here, as shown below.
+
+STRIPE_SECRET_KEY: 
+STRIPE_PUBLISHABLE_KEY: 
+HMAC_SECRET: 
+HMAC_ALGORITHM: 
+
+stripe_endpoint_secret:
+
+production:
+  STRIPE_SECRET_KEY: 
+  STRIPE_PUBLISHABLE_KEY: 
+
+
