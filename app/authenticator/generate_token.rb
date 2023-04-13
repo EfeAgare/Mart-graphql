@@ -1,5 +1,7 @@
 # frozen_string_literal: true
+
 require "jwt"
+
 class GenerateToken
   attr_accessor :user_id, :token
 
@@ -29,6 +31,7 @@ class GenerateToken
   end
 
   def hmac_secret
+    puts ENV["HMAC_SECRET"]
     ENV["HMAC_SECRET"]
   end
 
