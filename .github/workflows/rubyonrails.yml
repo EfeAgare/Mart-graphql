@@ -35,7 +35,7 @@ jobs:
           bundler-cache: true
       # Add or replace database setup steps here
       - name: Install dependencies
-        run: bundle install
+        run: bundle lock --add-platform x86_64-linux &&  bundle install
       - name: Set up database schema
         run: bin/rails db:schema:load
       # Add or replace test runners here
