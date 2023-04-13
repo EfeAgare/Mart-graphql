@@ -11,7 +11,8 @@ class Order < ApplicationRecord
     pending_confirmation: 0,
     confirmed: 1,
     shipped: 2,
-    delivered: 3
+    paid: 3,
+    delivered: 4
   }
 
   def self.instance_method_already_implemented?(method_name)

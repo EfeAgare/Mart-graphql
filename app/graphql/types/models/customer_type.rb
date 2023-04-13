@@ -14,6 +14,6 @@ module Types
     field :address_2, String, null: true
     field :address_1, String, null: true
     field :token, String, null: false
-    field :credit_card, String, null: false
+    field :credit_card, String, null: true
   end
 end
