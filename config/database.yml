@@ -73,13 +73,13 @@ test:
 # the values provided in this file. Alternatively, you can specify a connection
 # URL environment variable explicitly:
 #
-#   production:
+# ***REMOVED***
 #     url: <%= ENV['MY_APP_DATABASE_URL'] %>
 #
 # Read https://guides.rubyonrails.org/configuring.html#configuring-a-database
 # for a full overview on how database connection configuration can be specified.
 #
-production:
+***REMOVED***
   <<: *default
   database: Efe_Mart_GraphQL_production
   username: Efe_Mart_GraphQL
