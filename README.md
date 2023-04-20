@@ -9,6 +9,8 @@
   * Git
   * Graphql
   * Ruby on Rails
+  * Stripe
+  * Rspec
   * Postgres. https://pganalyze.com/blog/full-text-search-ruby-rails-postgres
   
   In order to install and run this project locally, you would need to have the
@@ -21,6 +23,9 @@ following installed on you local machine.
 - Navigate to the project directory
 
 - Run `bundle install` to install the projects dependencies
+- Run `bundle exec rails db:create` to create DB
+- Run `bundle exec rails db:migration` 
+
 - Provide values for the following environment variables used within the app,
   using:
 
